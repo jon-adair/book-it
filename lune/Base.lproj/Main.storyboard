@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKn-Yb-h4U" userLabel="Menu View">
+                                <rect key="frame" x="500" y="20" width="100" height="580"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sF-ug-VkO" userLabel="Button Moon">
+                                        <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1sF-ug-VkO" secondAttribute="height" multiplier="1:1" id="eUl-k4-qwP"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-moon.png"/>
+                                        <connections>
+                                            <action selector="clickMoon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZS8-ev-WP8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndm-nS-ITj" userLabel="Button Book">
+                                        <rect key="frame" x="10" y="100" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ndm-nS-ITj" secondAttribute="height" multiplier="1:1" id="1y0-TT-igD"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-book.png"/>
+                                        <connections>
+                                            <action selector="clickBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sU-G1-EFp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ndm-nS-ITj" firstAttribute="top" secondItem="WKn-Yb-h4U" secondAttribute="top" constant="10" id="CVq-Sf-hAg"/>
+                                    <constraint firstItem="Ndm-nS-ITj" firstAttribute="top" secondItem="1sF-ug-VkO" secondAttribute="bottom" constant="10" id="Eyv-6j-Nzk"/>
+                                    <constraint firstAttribute="width" constant="100" id="FDw-LR-Bxs"/>
+                                    <constraint firstItem="1sF-ug-VkO" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="Odc-e6-nWs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ndm-nS-ITj" secondAttribute="trailing" constant="10" id="dM5-fE-Wdu"/>
+                                    <constraint firstItem="1sF-ug-VkO" firstAttribute="top" secondItem="WKn-Yb-h4U" secondAttribute="top" constant="10" id="hVp-qa-9yM"/>
+                                    <constraint firstAttribute="trailing" secondItem="1sF-ug-VkO" secondAttribute="trailing" constant="10" id="oyp-vz-0sg"/>
+                                    <constraint firstItem="Ndm-nS-ITj" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="zue-W7-jAX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CVq-Sf-hAg"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-bx-XhY">
+                                <rect key="frame" x="0.0" y="20" width="500" height="580"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25104316679999999" green="0.39965208740000002" blue="0.67857142859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WKn-Yb-h4U" secondAttribute="bottom" id="5fa-nf-jhQ"/>
+                            <constraint firstItem="bKt-bx-XhY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6VZ-KF-cYk"/>
+                            <constraint firstItem="WKn-Yb-h4U" firstAttribute="leading" secondItem="bKt-bx-XhY" secondAttribute="trailing" id="BHS-ia-eUN"/>
+                            <constraint firstItem="bKt-bx-XhY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dkt-Lx-yhT"/>
+                            <constraint firstItem="WKn-Yb-h4U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hm3-9V-Uvj"/>
+                            <constraint firstAttribute="trailing" secondItem="WKn-Yb-h4U" secondAttribute="trailing" id="Jrr-yb-7rL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bKt-bx-XhY" secondAttribute="bottom" id="jsV-WF-r9U"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnBook" destination="Ndm-nS-ITj" id="uwP-Ls-TQF"/>
+                        <outlet property="btnMoon" destination="1sF-ug-VkO" id="hQ1-Ag-qvU"/>
+                        <outlet property="containerView" destination="bKt-bx-XhY" id="nqG-Az-1GR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-book.png" width="600" height="600"/>
+        <image name="icon-moon.png" width="600" height="600"/>
+    </resources>
 </document>

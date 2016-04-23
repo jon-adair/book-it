@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *btnMoon;
+@property (weak, nonatomic) IBOutlet UIButton *btnBook;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 
 @end
 
