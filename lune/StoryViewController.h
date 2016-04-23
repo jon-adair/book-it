@@ -1,5 +1,5 @@
 //
-//  MoonViewController.h
+//  StoryViewController.h
 //  lune
 //
 //  Created by Jon Adair on 4/23/16.
@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 
-@interface MoonViewController : UIViewController
-
+@interface StoryViewController : UIViewController <UIWebViewDelegate>
 @property (weak, nonatomic) ViewController *vcMain;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+- (void) setContent:(NSString *)url;
 
 @end

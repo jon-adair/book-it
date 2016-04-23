@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _tableView.backgroundColor = [UIColor blackColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,7 +35,35 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = 
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"storypicker"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"storypicker"];
+    }
+    
+    NSString *label;
+    
+    switch ( indexPath.row ) {
+        case 1:
+            label = @"Neil Armstrong";
+            break;
+            
+        default:
+            label = @"Story";
+            break;
+    }
+    
+    cell.textLabel.text = label;
+    cell.imageView.image = [UIImage imageNamed:@"icon-book"];
+    cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
+    cell.backgroundColor = [UIColor blackColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_vcMain didSelectStory:indexPath.row];
 }
 
 /*

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ViewController.h"
+
+
 @interface StoryPickerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) ViewController *vcMain;
 
 @end

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnBook;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
+- (void) didSelectStory:(int) storyId;
 
 @end
 

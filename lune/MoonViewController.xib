@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoonViewController">
@@ -15,14 +16,22 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vO-8F-C05">
-                    <rect key="frame" x="323" y="264" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon-dish" translatesAutoresizingMaskIntoConstraints="NO" id="1uq-Ga-H1J">
+                    <rect key="frame" x="212" y="210" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2CB-2t-Mmf"/>
+                        <constraint firstAttribute="width" secondItem="1uq-Ga-H1J" secondAttribute="height" multiplier="1:1" id="i8d-fZ-D3R"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1uq-Ga-H1J" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Kp-qv-3d5"/>
+                <constraint firstItem="1uq-Ga-H1J" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gtz-jB-fo7"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="icon-dish" width="30" height="30"/>
+    </resources>
 </document>

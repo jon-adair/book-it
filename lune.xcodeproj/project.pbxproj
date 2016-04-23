@@ -20,6 +20,12 @@
 		4682BEC81CCBC93000D7C00F /* MoonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4682BEC61CCBC93000D7C00F /* MoonViewController.xib */; };
 		4682BECC1CCBCAD200D7C00F /* StoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4682BECA1CCBCAD200D7C00F /* StoryPickerViewController.m */; };
 		4682BECD1CCBCAD200D7C00F /* StoryPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4682BECB1CCBCAD200D7C00F /* StoryPickerViewController.xib */; };
+		4682BED11CCBDDA200D7C00F /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4682BECF1CCBDDA200D7C00F /* StoryViewController.m */; };
+		4682BED21CCBDDA200D7C00F /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4682BED01CCBDDA200D7C00F /* StoryViewController.xib */; };
+		4682BED41CCBF4BC00D7C00F /* story-armstrong.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BED31CCBF4BC00D7C00F /* story-armstrong.html */; };
+		4682BED61CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4682BED51CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg */; };
+		4682BED81CCBF7BB00D7C00F /* blank.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BED71CCBF7BB00D7C00F /* blank.html */; };
+		4682BEDA1CCBF94600D7C00F /* icon-dish.png in Resources */ = {isa = PBXBuildFile; fileRef = 4682BED91CCBF94600D7C00F /* icon-dish.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,13 @@
 		4682BEC91CCBCAD200D7C00F /* StoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPickerViewController.h; sourceTree = "<group>"; };
 		4682BECA1CCBCAD200D7C00F /* StoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPickerViewController.m; sourceTree = "<group>"; };
 		4682BECB1CCBCAD200D7C00F /* StoryPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryPickerViewController.xib; sourceTree = "<group>"; };
+		4682BECE1CCBDDA200D7C00F /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
+		4682BECF1CCBDDA200D7C00F /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
+		4682BED01CCBDDA200D7C00F /* StoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
+		4682BED31CCBF4BC00D7C00F /* story-armstrong.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "story-armstrong.html"; sourceTree = "<group>"; };
+		4682BED51CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "neil-armstrong-hero-AB.jpeg"; sourceTree = "<group>"; };
+		4682BED71CCBF7BB00D7C00F /* blank.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = blank.html; sourceTree = "<group>"; };
+		4682BED91CCBF94600D7C00F /* icon-dish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dish.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +87,8 @@
 		4682BE971CCBBB9000D7C00F /* lune */ = {
 			isa = PBXGroup;
 			children = (
+				4682BED91CCBF94600D7C00F /* icon-dish.png */,
+				4682BED51CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg */,
 				4682BEAF1CCBBCB900D7C00F /* icon-book.png */,
 				4682BEB01CCBBCB900D7C00F /* icon-chart.png */,
 				4682BEB11CCBBCB900D7C00F /* icon-moon.png */,
@@ -92,6 +107,11 @@
 				4682BEC91CCBCAD200D7C00F /* StoryPickerViewController.h */,
 				4682BECA1CCBCAD200D7C00F /* StoryPickerViewController.m */,
 				4682BECB1CCBCAD200D7C00F /* StoryPickerViewController.xib */,
+				4682BECE1CCBDDA200D7C00F /* StoryViewController.h */,
+				4682BECF1CCBDDA200D7C00F /* StoryViewController.m */,
+				4682BED01CCBDDA200D7C00F /* StoryViewController.xib */,
+				4682BED31CCBF4BC00D7C00F /* story-armstrong.html */,
+				4682BED71CCBF7BB00D7C00F /* blank.html */,
 			);
 			path = lune;
 			sourceTree = "<group>";
@@ -135,6 +155,7 @@
 				TargetAttributes = {
 					4682BE941CCBBB9000D7C00F = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VU8HEYFGP5;
 					};
 				};
 			};
@@ -164,11 +185,16 @@
 				4682BEA81CCBBB9000D7C00F /* LaunchScreen.storyboard in Resources */,
 				4682BEC81CCBC93000D7C00F /* MoonViewController.xib in Resources */,
 				4682BEB21CCBBCB900D7C00F /* icon-book.png in Resources */,
+				4682BEDA1CCBF94600D7C00F /* icon-dish.png in Resources */,
+				4682BED61CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg in Resources */,
 				4682BEA51CCBBB9000D7C00F /* Assets.xcassets in Resources */,
 				4682BECD1CCBCAD200D7C00F /* StoryPickerViewController.xib in Resources */,
 				4682BEB41CCBBCB900D7C00F /* icon-moon.png in Resources */,
+				4682BED41CCBF4BC00D7C00F /* story-armstrong.html in Resources */,
 				4682BEB31CCBBCB900D7C00F /* icon-chart.png in Resources */,
+				4682BED81CCBF7BB00D7C00F /* blank.html in Resources */,
 				4682BEA31CCBBB9000D7C00F /* Main.storyboard in Resources */,
+				4682BED21CCBDDA200D7C00F /* StoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +207,7 @@
 			files = (
 				4682BECC1CCBCAD200D7C00F /* StoryPickerViewController.m in Sources */,
 				4682BEA01CCBBB9000D7C00F /* ViewController.m in Sources */,
+				4682BED11CCBDDA200D7C00F /* StoryViewController.m in Sources */,
 				4682BE9D1CCBBB9000D7C00F /* AppDelegate.m in Sources */,
 				4682BE9A1CCBBB9000D7C00F /* main.m in Sources */,
 				4682BEC71CCBC93000D7C00F /* MoonViewController.m in Sources */,
@@ -297,10 +324,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = lune/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinkamingo.lune;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -308,10 +338,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = lune/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinkamingo.lune;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

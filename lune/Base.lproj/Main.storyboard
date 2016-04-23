@@ -41,6 +41,17 @@
                                             <action selector="clickBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sU-G1-EFp"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrQ-HG-qs9" userLabel="Button Book">
+                                        <rect key="frame" x="10" y="190" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zrQ-HG-qs9" secondAttribute="height" multiplier="1:1" id="5Xg-Xg-ht3"/>
+                                            <constraint firstAttribute="width" secondItem="zrQ-HG-qs9" secondAttribute="height" multiplier="1:1" id="ZSi-pn-XYf"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-chart.png"/>
+                                        <connections>
+                                            <action selector="clickChart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fq9-zy-Tqt"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -48,9 +59,13 @@
                                     <constraint firstItem="Ndm-nS-ITj" firstAttribute="top" secondItem="1sF-ug-VkO" secondAttribute="bottom" constant="10" id="Eyv-6j-Nzk"/>
                                     <constraint firstAttribute="width" constant="100" id="FDw-LR-Bxs"/>
                                     <constraint firstItem="1sF-ug-VkO" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="Odc-e6-nWs"/>
+                                    <constraint firstItem="zrQ-HG-qs9" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="P3u-Eg-eMn"/>
+                                    <constraint firstItem="zrQ-HG-qs9" firstAttribute="top" secondItem="Ndm-nS-ITj" secondAttribute="bottom" constant="10" id="Ufb-iP-UFh"/>
                                     <constraint firstAttribute="trailing" secondItem="Ndm-nS-ITj" secondAttribute="trailing" constant="10" id="dM5-fE-Wdu"/>
                                     <constraint firstItem="1sF-ug-VkO" firstAttribute="top" secondItem="WKn-Yb-h4U" secondAttribute="top" constant="10" id="hVp-qa-9yM"/>
+                                    <constraint firstAttribute="trailing" secondItem="zrQ-HG-qs9" secondAttribute="trailing" constant="10" id="lex-9H-lQB"/>
                                     <constraint firstAttribute="trailing" secondItem="1sF-ug-VkO" secondAttribute="trailing" constant="10" id="oyp-vz-0sg"/>
+                                    <constraint firstItem="zrQ-HG-qs9" firstAttribute="width" secondItem="zrQ-HG-qs9" secondAttribute="height" multiplier="1:1" id="zWc-DU-4HR"/>
                                     <constraint firstItem="Ndm-nS-ITj" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="zue-W7-jAX"/>
                                 </constraints>
                                 <variation key="default">
@@ -86,6 +101,7 @@
     </scenes>
     <resources>
         <image name="icon-book.png" width="600" height="600"/>
+        <image name="icon-chart.png" width="600" height="600"/>
         <image name="icon-moon.png" width="600" height="600"/>
     </resources>
 </document>
