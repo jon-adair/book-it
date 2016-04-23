@@ -23,7 +23,6 @@
 }
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -71,7 +70,7 @@
     NSString *filePath;
     
     switch ( storyId ) {
-        case 1:
+        case 0:
             filePath = [[NSBundle mainBundle] pathForResource:@"story-armstrong" ofType:@"html"];
             break;
         default:

@@ -44,8 +44,14 @@
     NSString *label;
     
     switch ( indexPath.row ) {
-        case 1:
+        case 0:
             label = @"Neil Armstrong";
+            break;
+        case 1:
+            label = @"What the Moon Sees";
+            break;
+        case 2:
+            label = @"The Moon Through the Years";
             break;
             
         default:
@@ -58,6 +64,7 @@
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     cell.backgroundColor = [UIColor blackColor];
     cell.textLabel.textColor = [UIColor whiteColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }

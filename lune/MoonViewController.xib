@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoonViewController">
             <connections>
+                <outlet property="btnPhase" destination="Ru3-Co-cCR" id="C0c-YL-NiE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,22 +17,48 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon-dish" translatesAutoresizingMaskIntoConstraints="NO" id="1uq-Ga-H1J">
-                    <rect key="frame" x="212" y="210" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-dish.png" translatesAutoresizingMaskIntoConstraints="NO" id="1uq-Ga-H1J">
+                    <rect key="frame" x="200" y="200" width="200" height="200"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="2CB-2t-Mmf"/>
                         <constraint firstAttribute="width" secondItem="1uq-Ga-H1J" secondAttribute="height" multiplier="1:1" id="i8d-fZ-D3R"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ru3-Co-cCR">
+                    <rect key="frame" x="20" y="480" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="TTf-pE-ODq"/>
+                        <constraint firstAttribute="width" secondItem="Ru3-Co-cCR" secondAttribute="height" multiplier="1:1" id="Vau-pf-XuA"/>
+                    </constraints>
+                    <state key="normal" image="icon-moon-waning-gibbous.png"/>
+                    <connections>
+                        <action selector="clickMoonPhase:" destination="-1" eventType="touchUpInside" id="PXP-g3-CWW"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Ru3-Co-cCR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="6ue-4a-8tG"/>
+                <constraint firstAttribute="bottom" secondItem="Ru3-Co-cCR" secondAttribute="bottom" constant="20" id="83h-re-qae"/>
                 <constraint firstItem="1uq-Ga-H1J" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Kp-qv-3d5"/>
                 <constraint firstItem="1uq-Ga-H1J" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gtz-jB-fo7"/>
             </constraints>
         </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uim-nU-kGy">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+        </label>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kfh-XK-3WL">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+        </button>
     </objects>
     <resources>
-        <image name="icon-dish" width="30" height="30"/>
+        <image name="icon-dish.png" width="600" height="600"/>
+        <image name="icon-moon-waning-gibbous.png" width="600" height="600"/>
     </resources>
 </document>

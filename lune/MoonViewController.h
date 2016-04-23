@@ -12,5 +12,6 @@
 @interface MoonViewController : UIViewController
 
 @property (weak, nonatomic) ViewController *vcMain;
+@property (weak, nonatomic) IBOutlet UIButton *btnPhase;
 
 @end
