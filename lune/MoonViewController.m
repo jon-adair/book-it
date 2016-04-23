@@ -69,6 +69,17 @@
     // can go forward
     //now = [now dateByAddingTimeInterval:60*60*24*6];
     [self updateMoonPhase];
+    
+     NSMutableArray *images = [[NSMutableArray alloc] init];
+    
+    [images addObject:[UIImage imageNamed:@"icon-dish-0"]];
+    [images addObject:[UIImage imageNamed:@"icon-dish-1"]];
+    [images addObject:[UIImage imageNamed:@"icon-dish-2"]];
+    [images addObject:[UIImage imageNamed:@"icon-dish-1"]];
+    
+    _imgDish.animationImages = images;
+    _imgDish.animationDuration = 2.0;
+    [_imgDish startAnimating];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,6 +101,9 @@
     float elevation = [moon elevationAtDate:rightNow inLocation:location];
     
     NSLog(@"Moon azimuth: %f, elevation: %f", azimuth, elevation);
+    
+    [_imgDish stopAnimating];
+    [_imgDish setHidden:YES];
 }
 
 
