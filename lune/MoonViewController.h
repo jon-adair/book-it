@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import<CoreLocation/CoreLocation.h>
 
-@interface MoonViewController : UIViewController
+@interface MoonViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) ViewController *vcMain;
 @property (weak, nonatomic) IBOutlet UIButton *btnPhase;
+@property (weak, nonatomic) IBOutlet UIImageView *imgDish;
+
+
 
 @end

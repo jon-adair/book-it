@@ -11,7 +11,8 @@
 #import "StoryPickerViewController.h"
 #import "StoryViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+}
 
 @end
 
@@ -39,6 +40,8 @@
     [self.containerView addSubview:vc.view];
     [vc didMoveToParentViewController:self];
     
+
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -65,6 +68,22 @@
 
 - (IBAction)clickChart:(id)sender {
 }
+
+- (IBAction)clickPictures:(id)sender {
+}
+
+- (IBAction)clickVideos:(id)sender {
+}
+
+- (IBAction)clickPortrait:(id)sender {
+}
+
+- (IBAction)clickFavorites:(id)sender {
+}
+
+- (IBAction)clickSettings:(id)sender {
+}
+
 
 - (void) didSelectStory:(int) storyId {
     NSString *filePath;

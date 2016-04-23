@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoonViewController">
             <connections>
                 <outlet property="btnPhase" destination="Ru3-Co-cCR" id="C0c-YL-NiE"/>
+                <outlet property="imgDish" destination="1uq-Ga-H1J" id="w44-O6-ItT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-dish.png" translatesAutoresizingMaskIntoConstraints="NO" id="1uq-Ga-H1J">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-dish-0.png" translatesAutoresizingMaskIntoConstraints="NO" id="1uq-Ga-H1J">
                     <rect key="frame" x="200" y="200" width="200" height="200"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="2CB-2t-Mmf"/>
@@ -58,7 +59,7 @@
         </button>
     </objects>
     <resources>
-        <image name="icon-dish.png" width="600" height="600"/>
+        <image name="icon-dish-0.png" width="600" height="600"/>
         <image name="icon-moon-waning-gibbous.png" width="600" height="600"/>
     </resources>
 </document>

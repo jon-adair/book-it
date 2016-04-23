@@ -7,6 +7,8 @@
 //
 
 #import "MoonViewController.h"
+#import "CMCelestialObject.h"
+#import "CMMoon.h"
 
 @interface MoonViewController ()
 
@@ -15,37 +17,121 @@
 @implementation MoonViewController {
     float _phase;
     NSDate *now;
+    
+    CLLocationManager *locationManager;
+
+    CLGeocoder *geocoder;
+    CLPlacemark *placemark;
+    
+
+
 }
 
 - (IBAction)clickMoonPhase:(id)sender {
-    
+    now = [now dateByAddingTimeInterval:60*60*24*1];
+    [self updateMoonPhase];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // Do any additional setup after loading the view from its nib.
+    
+    geocoder = [[CLGeocoder alloc] init];
+    if (locationManager == nil)
+    {
+        locationManager = [[CLLocationManager alloc] init];
+        [locationManager requestWhenInUseAuthorization];
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        locationManager.delegate = self;
+    }
+    [locationManager startUpdatingLocation];
+}
+
+- (void) updateMoonPhase {
+    _phase = [self phase];
+    NSLog(@"Phase: %f", _phase);
+    // So zero is new, 0.5 is full, 0.75 is 3rd q
+    
+    // TODO: need to figure out the phases, the images we have, and map them
+    // also since we're inverting the image... the images don't represent the phase well
+    if ( _phase >= 0.4 && _phase < 0.6 ) {
+        _btnPhase.imageView.image = [UIImage imageNamed:@"icon-moon-waning-gibbous.png"];
+        
+    } else if ( _phase >= 0.6) {
+        _btnPhase.imageView.image = [UIImage imageNamed:@"icon-moon-waning-gibbous.png"];
+    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     now = [NSDate date];
     // can go forward
     //now = [now dateByAddingTimeInterval:60*60*24*6];
-    _phase = [self phase];
-    NSLog(@"Phase: %f", _phase);
-    // So zero is new, 0.5 is full, 0.75 is 3rd q
-
-    // TODO: need to figure out the phases, the images we have, and map them
-    if ( _phase > 0.4 && _phase < 0.6 ) {
-        _btnPhase.imageView.image = [UIImage imageNamed:@"icon-moon-waning-gibbous.png"];
-        
-    }
+    [self updateMoonPhase];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+/////// Moon location code
+
+- (void) findMoonPosition: (CLLocationCoordinate2D)location {
+    NSDate *rightNow = [NSDate date];
+    
+    CMMoon *moon = [[CMMoon alloc] init];
+    
+    // Azimith: 0 due north, 90 due east
+    float azimuth = [moon azimuthAngleAtDate:rightNow inLocation:location];
+    // Elevation: 0 horizon
+    float elevation = [moon elevationAtDate:rightNow inLocation:location];
+    
+    NSLog(@"Moon azimuth: %f, elevation: %f", azimuth, elevation);
+}
+
+
+/////// Location code
+
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *newLocation = [locations lastObject];
+    
+    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        if (error == nil&& [placemarks count] >0) {
+            placemark = [placemarks lastObject];
+            
+            NSString *latitude, *longitude, *state, *country;
+            
+            latitude = [NSString stringWithFormat:@"%f",newLocation.coordinate.latitude];
+            longitude = [NSString stringWithFormat:@"%f",newLocation.coordinate.longitude];
+            state = placemark.administrativeArea;
+            country = placemark.country;
+
+            NSLog(@"Location: %@, %@, %@, %@", latitude, longitude, state, country);
+            
+            [self findMoonPosition:newLocation.coordinate];
+            
+
+        } else {
+            NSLog(@"%@", error.debugDescription);
+        }
+    }];
+    
+    // Turn off the location manager to save power.
+    [manager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Cannot find the location: %@", error);
+}
+
+
+/////// Moon Phase Code
 
 
 

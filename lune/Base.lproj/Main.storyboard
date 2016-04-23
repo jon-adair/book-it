@@ -44,7 +44,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrQ-HG-qs9" userLabel="Button Book">
                                         <rect key="frame" x="10" y="150" width="60" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="zrQ-HG-qs9" secondAttribute="height" multiplier="1:1" id="5Xg-Xg-ht3"/>
                                             <constraint firstAttribute="width" secondItem="zrQ-HG-qs9" secondAttribute="height" multiplier="1:1" id="ZSi-pn-XYf"/>
                                         </constraints>
                                         <state key="normal" image="icon-chart.png"/>
@@ -52,27 +51,85 @@
                                             <action selector="clickChart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fq9-zy-Tqt"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6R-i6-LaC" userLabel="Button Images">
+                                        <rect key="frame" x="10" y="220" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="j6R-i6-LaC" secondAttribute="height" multiplier="1:1" id="SLh-3Y-Jdv"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-images.png"/>
+                                        <connections>
+                                            <action selector="clickPictures:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpL-hd-eU6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cv-1x-T8T" userLabel="Button Videos">
+                                        <rect key="frame" x="10" y="290" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6cv-1x-T8T" secondAttribute="height" multiplier="1:1" id="gm5-k2-ehD"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-video.png"/>
+                                        <connections>
+                                            <action selector="clickVideos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yft-PR-oWE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMf-bD-1Ic" userLabel="Button Portrait">
+                                        <rect key="frame" x="10" y="360" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hMf-bD-1Ic" secondAttribute="height" multiplier="1:1" id="IGq-EA-O7Q"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-portrait.png"/>
+                                        <connections>
+                                            <action selector="clickPortrait:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2B-71-6vK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBh-Bb-HI7" userLabel="Button Star">
+                                        <rect key="frame" x="10" y="430" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fBh-Bb-HI7" secondAttribute="height" multiplier="1:1" id="36k-af-gLw"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-star.png"/>
+                                        <connections>
+                                            <action selector="clickFavorites:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEa-FK-N41"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gl-mw-aad" userLabel="Button Settings">
+                                        <rect key="frame" x="10" y="500" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8Gl-mw-aad" secondAttribute="height" multiplier="1:1" id="XW7-t7-Q1D"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-gear.png"/>
+                                        <connections>
+                                            <action selector="clickSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hkf-gQ-BOA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Ndm-nS-ITj" firstAttribute="top" secondItem="WKn-Yb-h4U" secondAttribute="top" constant="10" id="CVq-Sf-hAg"/>
+                                    <constraint firstAttribute="trailing" secondItem="j6R-i6-LaC" secondAttribute="trailing" constant="10" id="1CJ-PA-Tj4"/>
+                                    <constraint firstItem="6cv-1x-T8T" firstAttribute="top" secondItem="j6R-i6-LaC" secondAttribute="bottom" constant="10" id="1Le-GW-nsW"/>
+                                    <constraint firstItem="hMf-bD-1Ic" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="7Dy-uY-uza"/>
+                                    <constraint firstItem="6cv-1x-T8T" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="AK3-dc-oCb"/>
+                                    <constraint firstItem="fBh-Bb-HI7" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="Aoz-Xs-v2u"/>
+                                    <constraint firstAttribute="trailing" secondItem="hMf-bD-1Ic" secondAttribute="trailing" constant="10" id="Dod-hN-bqF"/>
                                     <constraint firstItem="Ndm-nS-ITj" firstAttribute="top" secondItem="1sF-ug-VkO" secondAttribute="bottom" constant="10" id="Eyv-6j-Nzk"/>
+                                    <constraint firstItem="j6R-i6-LaC" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="F9q-xq-2Cd"/>
                                     <constraint firstAttribute="width" constant="80" id="FDw-LR-Bxs"/>
+                                    <constraint firstItem="j6R-i6-LaC" firstAttribute="top" secondItem="zrQ-HG-qs9" secondAttribute="bottom" constant="10" id="GFN-Sz-O6i"/>
                                     <constraint firstItem="1sF-ug-VkO" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="Odc-e6-nWs"/>
                                     <constraint firstItem="zrQ-HG-qs9" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="P3u-Eg-eMn"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Gl-mw-aad" secondAttribute="trailing" constant="10" id="Pdg-dk-bbj"/>
+                                    <constraint firstAttribute="trailing" secondItem="fBh-Bb-HI7" secondAttribute="trailing" constant="10" id="RG5-gQ-VTn"/>
                                     <constraint firstItem="zrQ-HG-qs9" firstAttribute="top" secondItem="Ndm-nS-ITj" secondAttribute="bottom" constant="10" id="Ufb-iP-UFh"/>
+                                    <constraint firstItem="hMf-bD-1Ic" firstAttribute="top" secondItem="6cv-1x-T8T" secondAttribute="bottom" constant="10" id="Uo7-jn-8nT"/>
+                                    <constraint firstItem="8Gl-mw-aad" firstAttribute="top" secondItem="fBh-Bb-HI7" secondAttribute="bottom" constant="10" id="Xgn-2b-gY6"/>
                                     <constraint firstAttribute="trailing" secondItem="Ndm-nS-ITj" secondAttribute="trailing" constant="10" id="dM5-fE-Wdu"/>
                                     <constraint firstItem="1sF-ug-VkO" firstAttribute="top" secondItem="WKn-Yb-h4U" secondAttribute="top" constant="10" id="hVp-qa-9yM"/>
                                     <constraint firstAttribute="trailing" secondItem="zrQ-HG-qs9" secondAttribute="trailing" constant="10" id="lex-9H-lQB"/>
                                     <constraint firstAttribute="trailing" secondItem="1sF-ug-VkO" secondAttribute="trailing" constant="10" id="oyp-vz-0sg"/>
-                                    <constraint firstItem="zrQ-HG-qs9" firstAttribute="width" secondItem="zrQ-HG-qs9" secondAttribute="height" multiplier="1:1" id="zWc-DU-4HR"/>
+                                    <constraint firstItem="8Gl-mw-aad" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="rh3-tp-ayB"/>
+                                    <constraint firstAttribute="trailing" secondItem="6cv-1x-T8T" secondAttribute="trailing" constant="10" id="uey-KK-1fu"/>
+                                    <constraint firstItem="fBh-Bb-HI7" firstAttribute="top" secondItem="hMf-bD-1Ic" secondAttribute="bottom" constant="10" id="wny-Wr-6Vm"/>
                                     <constraint firstItem="Ndm-nS-ITj" firstAttribute="leading" secondItem="WKn-Yb-h4U" secondAttribute="leading" constant="10" id="zue-W7-jAX"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="CVq-Sf-hAg"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-bx-XhY">
                                 <rect key="frame" x="0.0" y="20" width="520" height="580"/>
@@ -91,17 +148,29 @@
                     </view>
                     <connections>
                         <outlet property="btnBook" destination="Ndm-nS-ITj" id="uwP-Ls-TQF"/>
+                        <outlet property="btnData" destination="zrQ-HG-qs9" id="I1o-ZQ-8yi"/>
+                        <outlet property="btnFavorites" destination="fBh-Bb-HI7" id="Dl5-9e-XUn"/>
                         <outlet property="btnMoon" destination="1sF-ug-VkO" id="hQ1-Ag-qvU"/>
+                        <outlet property="btnPictures" destination="j6R-i6-LaC" id="cRb-Hb-h2t"/>
+                        <outlet property="btnPortrait" destination="hMf-bD-1Ic" id="2Ub-GS-GUz"/>
+                        <outlet property="btnSettings" destination="8Gl-mw-aad" id="yYu-Lc-X7G"/>
+                        <outlet property="btnVideos" destination="6cv-1x-T8T" id="RgH-oJ-NGo"/>
                         <outlet property="containerView" destination="bKt-bx-XhY" id="nqG-Az-1GR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="395" y="306"/>
         </scene>
     </scenes>
     <resources>
         <image name="icon-book.png" width="600" height="600"/>
         <image name="icon-chart.png" width="600" height="600"/>
+        <image name="icon-gear.png" width="600" height="600"/>
+        <image name="icon-images.png" width="600" height="600"/>
         <image name="icon-moon.png" width="600" height="600"/>
+        <image name="icon-portrait.png" width="600" height="600"/>
+        <image name="icon-star.png" width="600" height="600"/>
+        <image name="icon-video.png" width="600" height="600"/>
     </resources>
 </document>
