@@ -97,6 +97,20 @@
 }
 
 - (IBAction)clickSettings:(id)sender {
+    
+    NSString *filePath;
+    
+    filePath = [[NSBundle mainBundle] pathForResource:@"credits" ofType:@"html"];
+    
+    [vcStory setContent:filePath];
+    
+    UIViewController *vc = vcStory;
+    
+    [self addChildViewController:vc];
+    vc.view.frame = CGRectMake(0, 0, self.containerView.frame.size.width, self.containerView.frame.size.height);
+    [self.containerView addSubview:vc.view];
+    [vc didMoveToParentViewController:self];
+
 }
 
 
@@ -133,6 +147,21 @@
     switch ( storyId ) {
         case 0:
             filePath = [[NSBundle mainBundle] pathForResource:@"story-armstrong" ofType:@"html"];
+            break;
+        case 1:
+            filePath = [[NSBundle mainBundle] pathForResource:@"story-fun-facts" ofType:@"html"];
+            break;
+        case 2:
+            filePath = [[NSBundle mainBundle] pathForResource:@"story-folk-tale" ofType:@"html"];
+            break;
+        case 3:
+            filePath = [[NSBundle mainBundle] pathForResource:@"story-poem-01" ofType:@"html"];
+            break;
+        case 4:
+            filePath = [[NSBundle mainBundle] pathForResource:@"story-poem-02" ofType:@"html"];
+            break;
+        case 5:
+            filePath = [[NSBundle mainBundle] pathForResource:@"story-poem-03" ofType:@"html"];
             break;
         default:
             filePath = [[NSBundle mainBundle] pathForResource:@"blank" ofType:@"html"];

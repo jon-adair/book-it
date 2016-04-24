@@ -79,6 +79,15 @@
 		4682BF5C1CCCF23B00D7C00F /* video-06.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF591CCCF23B00D7C00F /* video-06.html */; };
 		4682BF5D1CCCF23B00D7C00F /* video-07.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF5A1CCCF23B00D7C00F /* video-07.html */; };
 		4682BF5E1CCCF23B00D7C00F /* video-08.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF5B1CCCF23B00D7C00F /* video-08.html */; };
+		4682BF601CCCF48F00D7C00F /* story-fun-facts.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF5F1CCCF48F00D7C00F /* story-fun-facts.html */; };
+		4682BF621CCCF5FA00D7C00F /* story-folk-tale.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF611CCCF5FA00D7C00F /* story-folk-tale.html */; };
+		4682BF641CCCF77D00D7C00F /* story-poem-01.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF631CCCF77D00D7C00F /* story-poem-01.html */; };
+		4682BF661CCCF81C00D7C00F /* The-Moon-by-RLS.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF651CCCF81C00D7C00F /* The-Moon-by-RLS.m4a */; };
+		4682BF691CCCF90C00D7C00F /* Child Moon by CS.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF671CCCF90C00D7C00F /* Child Moon by CS.m4a */; };
+		4682BF6A1CCCF90C00D7C00F /* The Freedom of the Moon by RF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF681CCCF90C00D7C00F /* The Freedom of the Moon by RF.m4a */; };
+		4682BF6D1CCCF9F600D7C00F /* story-poem-02.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF6B1CCCF9F600D7C00F /* story-poem-02.html */; };
+		4682BF6E1CCCF9F600D7C00F /* story-poem-03.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF6C1CCCF9F600D7C00F /* story-poem-03.html */; };
+		4682BF701CCCFB1700D7C00F /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF6F1CCCFB1700D7C00F /* credits.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +178,15 @@
 		4682BF591CCCF23B00D7C00F /* video-06.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-06.html"; sourceTree = "<group>"; };
 		4682BF5A1CCCF23B00D7C00F /* video-07.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-07.html"; sourceTree = "<group>"; };
 		4682BF5B1CCCF23B00D7C00F /* video-08.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-08.html"; sourceTree = "<group>"; };
+		4682BF5F1CCCF48F00D7C00F /* story-fun-facts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "story-fun-facts.html"; sourceTree = "<group>"; };
+		4682BF611CCCF5FA00D7C00F /* story-folk-tale.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "story-folk-tale.html"; sourceTree = "<group>"; };
+		4682BF631CCCF77D00D7C00F /* story-poem-01.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "story-poem-01.html"; sourceTree = "<group>"; };
+		4682BF651CCCF81C00D7C00F /* The-Moon-by-RLS.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The-Moon-by-RLS.m4a"; sourceTree = "<group>"; };
+		4682BF671CCCF90C00D7C00F /* Child Moon by CS.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Child Moon by CS.m4a"; sourceTree = "<group>"; };
+		4682BF681CCCF90C00D7C00F /* The Freedom of the Moon by RF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Freedom of the Moon by RF.m4a"; sourceTree = "<group>"; };
+		4682BF6B1CCCF9F600D7C00F /* story-poem-02.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "story-poem-02.html"; sourceTree = "<group>"; };
+		4682BF6C1CCCF9F600D7C00F /* story-poem-03.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "story-poem-03.html"; sourceTree = "<group>"; };
+		4682BF6F1CCCFB1700D7C00F /* credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = credits.html; path = lune/credits.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +205,7 @@
 		4682BE8C1CCBBB9000D7C00F = {
 			isa = PBXGroup;
 			children = (
+				4682BF6F1CCCFB1700D7C00F /* credits.html */,
 				4682BF531CCC9B5D00D7C00F /* CoreMotion.framework */,
 				4682BEF71CCC0F4B00D7C00F /* CMCelestial */,
 				4682BEDF1CCC0A5A00D7C00F /* CoreLocation.framework */,
@@ -291,6 +310,14 @@
 		4682BF101CCC35F900D7C00F /* Story Content */ = {
 			isa = PBXGroup;
 			children = (
+				4682BF6B1CCCF9F600D7C00F /* story-poem-02.html */,
+				4682BF6C1CCCF9F600D7C00F /* story-poem-03.html */,
+				4682BF651CCCF81C00D7C00F /* The-Moon-by-RLS.m4a */,
+				4682BF671CCCF90C00D7C00F /* Child Moon by CS.m4a */,
+				4682BF681CCCF90C00D7C00F /* The Freedom of the Moon by RF.m4a */,
+				4682BF631CCCF77D00D7C00F /* story-poem-01.html */,
+				4682BF611CCCF5FA00D7C00F /* story-folk-tale.html */,
+				4682BF5F1CCCF48F00D7C00F /* story-fun-facts.html */,
 				4682BED51CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg */,
 				4682BED31CCBF4BC00D7C00F /* story-armstrong.html */,
 				4682BED71CCBF7BB00D7C00F /* blank.html */,
@@ -400,14 +427,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4682BF031CCC177900D7C00F /* icon-images.png in Resources */,
+				4682BF6A1CCCF90C00D7C00F /* The Freedom of the Moon by RF.m4a in Resources */,
 				4682BEA81CCBBB9000D7C00F /* LaunchScreen.storyboard in Resources */,
 				4682BF311CCC8F1C00D7C00F /* image-04.jpg in Resources */,
 				4682BF491CCC916000D7C00F /* image-08.html in Resources */,
+				4682BF701CCCFB1700D7C00F /* credits.html in Resources */,
 				4682BF441CCC916000D7C00F /* image-03.html in Resources */,
 				4682BF2E1CCC8F1C00D7C00F /* image-01.jpg in Resources */,
+				4682BF661CCCF81C00D7C00F /* The-Moon-by-RLS.m4a in Resources */,
 				4682BEC81CCBC93000D7C00F /* MoonViewController.xib in Resources */,
 				4682BEB21CCBBCB900D7C00F /* icon-book.png in Resources */,
 				4682BF361CCC8F1C00D7C00F /* image-09.jpg in Resources */,
+				4682BF691CCCF90C00D7C00F /* Child Moon by CS.m4a in Resources */,
 				4682BF4A1CCC916000D7C00F /* image-09.html in Resources */,
 				4682BF571CCCEF9D00D7C00F /* video-04.html in Resources */,
 				4682BF5D1CCCF23B00D7C00F /* video-07.html in Resources */,
@@ -421,16 +452,21 @@
 				4682BF061CCC177900D7C00F /* icon-star.png in Resources */,
 				4682BF1A1CCC413800D7C00F /* youtube-2.html in Resources */,
 				4682BED61CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg in Resources */,
+				4682BF601CCCF48F00D7C00F /* story-fun-facts.html in Resources */,
+				4682BF6E1CCCF9F600D7C00F /* story-poem-03.html in Resources */,
 				4682BEA51CCBBB9000D7C00F /* Assets.xcassets in Resources */,
 				4682BEDC1CCBFDEB00D7C00F /* Origami512T.png in Resources */,
 				4682BF301CCC8F1C00D7C00F /* image-03.jpg in Resources */,
+				4682BF641CCCF77D00D7C00F /* story-poem-01.html in Resources */,
 				4682BF391CCC8F3900D7C00F /* image-01.html in Resources */,
 				4682BF451CCC916000D7C00F /* image-04.html in Resources */,
 				4682BECD1CCBCAD200D7C00F /* StoryPickerViewController.xib in Resources */,
 				4682BF511CCC968F00D7C00F /* video-02.html in Resources */,
 				4682BF461CCC916000D7C00F /* image-05.html in Resources */,
+				4682BF6D1CCCF9F600D7C00F /* story-poem-02.html in Resources */,
 				4682BF351CCC8F1C00D7C00F /* image-08.jpg in Resources */,
 				4682BF011CCC177900D7C00F /* icon-dish-2.png in Resources */,
+				4682BF621CCCF5FA00D7C00F /* story-folk-tale.html in Resources */,
 				4682BF5C1CCCF23B00D7C00F /* video-06.html in Resources */,
 				4682BF321CCC8F1C00D7C00F /* image-05.jpg in Resources */,
 				4682BF2F1CCC8F1C00D7C00F /* image-02.jpg in Resources */,

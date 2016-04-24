@@ -40,7 +40,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if ( [_contentMode isEqualToString:@"story"] ) {
-        return 3;
+        return 10;
     } else if ( [_contentMode isEqualToString:@"video"] ) {
         return 8;
     } else if ( [_contentMode isEqualToString:@"image"] ) {
@@ -67,10 +67,19 @@
                 label = @"Neil Armstrong";
                 break;
             case 1:
-                label = @"What the Moon Sees";
+                label = @"Fun Facts About the Moon";
                 break;
             case 2:
-                label = @"The Moon Through the Years";
+                label = @"How the Moon Was Created (Indian Folk Tale)";
+                break;
+            case 3:
+                label = @"The Moon - Robert Lewis Stevenson (Poem)";
+                break;
+            case 4:
+                label = @"The Freedom of The Moon - Robert Frost (Poem)";
+                break;
+            case 5:
+                label = @"Child Moon - Carl Sandburg (Poem)";
                 break;
                 
             default:
