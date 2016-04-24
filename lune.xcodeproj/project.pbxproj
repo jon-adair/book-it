@@ -88,6 +88,7 @@
 		4682BF6D1CCCF9F600D7C00F /* story-poem-02.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF6B1CCCF9F600D7C00F /* story-poem-02.html */; };
 		4682BF6E1CCCF9F600D7C00F /* story-poem-03.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF6C1CCCF9F600D7C00F /* story-poem-03.html */; };
 		4682BF701CCCFB1700D7C00F /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF6F1CCCFB1700D7C00F /* credits.html */; };
+		4682BF721CCD002200D7C00F /* moon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF711CCD002200D7C00F /* moon.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,6 +188,7 @@
 		4682BF6B1CCCF9F600D7C00F /* story-poem-02.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "story-poem-02.html"; sourceTree = "<group>"; };
 		4682BF6C1CCCF9F600D7C00F /* story-poem-03.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "story-poem-03.html"; sourceTree = "<group>"; };
 		4682BF6F1CCCFB1700D7C00F /* credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = credits.html; path = lune/credits.html; sourceTree = "<group>"; };
+		4682BF711CCD002200D7C00F /* moon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moon.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				4682BF6F1CCCFB1700D7C00F /* credits.html */,
+				4682BF711CCD002200D7C00F /* moon.jpg */,
 				4682BF531CCC9B5D00D7C00F /* CoreMotion.framework */,
 				4682BEF71CCC0F4B00D7C00F /* CMCelestial */,
 				4682BEDF1CCC0A5A00D7C00F /* CoreLocation.framework */,
@@ -451,6 +454,7 @@
 				4682BF471CCC916000D7C00F /* image-06.html in Resources */,
 				4682BF061CCC177900D7C00F /* icon-star.png in Resources */,
 				4682BF1A1CCC413800D7C00F /* youtube-2.html in Resources */,
+				4682BF721CCD002200D7C00F /* moon.jpg in Resources */,
 				4682BED61CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg in Resources */,
 				4682BF601CCCF48F00D7C00F /* story-fun-facts.html in Resources */,
 				4682BF6E1CCCF9F600D7C00F /* story-poem-03.html in Resources */,

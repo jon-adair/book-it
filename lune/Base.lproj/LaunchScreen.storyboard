@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,6 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="N9B-Zb-D61">
+                                <rect key="frame" x="20" y="20" width="560" height="425"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="N9B-Zb-D61" secondAttribute="height" multiplier="512:389" id="jBA-C9-2il"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Origami512T.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Gp-Ut-6v0">
                                 <rect key="frame" x="344" y="344" width="256" height="256"/>
                                 <constraints>
@@ -25,7 +32,7 @@
                                     <constraint firstAttribute="width" secondItem="5Gp-Ut-6v0" secondAttribute="height" multiplier="1:1" id="wzs-yD-yaG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book It to the Moon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qF-fz-UXk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LunrLocatr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qF-fz-UXk">
                                 <rect key="frame" x="140" y="279" width="321" height="42"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -35,9 +42,12 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5Gp-Ut-6v0" secondAttribute="trailing" id="CJ6-QS-odZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N9B-Zb-D61" secondAttribute="trailing" id="Mbj-Ez-of6"/>
                             <constraint firstItem="4qF-fz-UXk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fSD-do-2jD"/>
+                            <constraint firstItem="N9B-Zb-D61" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="iVv-Yd-DKa"/>
                             <constraint firstItem="4qF-fz-UXk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="k0q-gp-sKH"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="5Gp-Ut-6v0" secondAttribute="bottom" id="mcD-AZ-aVN"/>
+                            <constraint firstItem="N9B-Zb-D61" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="p8J-cl-uw8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,5 +58,6 @@
     </scenes>
     <resources>
         <image name="Origami512T.png" width="512" height="512"/>
+        <image name="moon.jpg" width="1024" height="778"/>
     </resources>
 </document>

@@ -195,6 +195,8 @@
     [_imgDish stopAnimating];
     [_imgDish setHidden:YES];
     [_lblLocating setHidden:YES];
+    [_lblMoon setHidden:NO];
+
     
     moonAzimuth = azimuth * 180.0 / M_PI;
     moonElevation = elevation * 180.0 / M_PI;

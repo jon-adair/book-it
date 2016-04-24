@@ -40,7 +40,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if ( [_contentMode isEqualToString:@"story"] ) {
-        return 10;
+        return 6;
     } else if ( [_contentMode isEqualToString:@"video"] ) {
         return 8;
     } else if ( [_contentMode isEqualToString:@"image"] ) {
