@@ -73,6 +73,7 @@
 		4682BF4E1CCC94DA00D7C00F /* video-01.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF4D1CCC94DA00D7C00F /* video-01.html */; };
 		4682BF511CCC968F00D7C00F /* video-02.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF4F1CCC968F00D7C00F /* video-02.html */; };
 		4682BF521CCC968F00D7C00F /* video-03.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF501CCC968F00D7C00F /* video-03.html */; };
+		4682BF541CCC9B5D00D7C00F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4682BF531CCC9B5D00D7C00F /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,7 @@
 		4682BF4D1CCC94DA00D7C00F /* video-01.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-01.html"; sourceTree = "<group>"; };
 		4682BF4F1CCC968F00D7C00F /* video-02.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-02.html"; sourceTree = "<group>"; };
 		4682BF501CCC968F00D7C00F /* video-03.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-03.html"; sourceTree = "<group>"; };
+		4682BF531CCC9B5D00D7C00F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4682BF541CCC9B5D00D7C00F /* CoreMotion.framework in Frameworks */,
 				4682BEE01CCC0A5A00D7C00F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +177,7 @@
 		4682BE8C1CCBBB9000D7C00F = {
 			isa = PBXGroup;
 			children = (
+				4682BF531CCC9B5D00D7C00F /* CoreMotion.framework */,
 				4682BEF71CCC0F4B00D7C00F /* CMCelestial */,
 				4682BEDF1CCC0A5A00D7C00F /* CoreLocation.framework */,
 				4682BE971CCBBB9000D7C00F /* lune */,

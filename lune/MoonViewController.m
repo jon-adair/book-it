@@ -9,6 +9,8 @@
 #import "MoonViewController.h"
 #import "CMCelestialObject.h"
 #import "CMMoon.h"
+#import <CoreMotion/CoreMotion.h>
+
 
 @interface MoonViewController ()
 
@@ -25,7 +27,9 @@
     CLLocationDirection currentHeading;
     
     float moonAzimuth, moonElevation;
+    CMMotionManager *motionManager;
     
+
 
 
 }
@@ -55,11 +59,53 @@
         [locationManager startUpdatingHeading];
     }
     
+    motionManager = [[CMMotionManager alloc] init];
+    motionManager.accelerometerUpdateInterval = .2;
+    motionManager.gyroUpdateInterval = .2;
+    
+    [motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
+                                             withHandler:^(CMAccelerometerData  *accelerometerData, NSError *error) {
+                                                 [self outputAccelertionData:accelerometerData.acceleration];
+                                                 if(error){
+                                                     
+                                                     NSLog(@"%@", error);
+                                                 }
+                                             }];
+    
+    [motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue]
+                                    withHandler:^(CMGyroData *gyroData, NSError *error) {
+                                        [self outputRotationData:gyroData.rotationRate];
+                                    }];
+    
+    
     [_imgUp setHidden:YES];
     [_imgDown setHidden:YES];
     [_imgLeft setHidden:YES];
     [_imgRight setHidden:YES];
     
+    [_lblMoon setHidden:YES];
+    
+}
+
+-(void)outputAccelertionData:(CMAcceleration)acceleration
+{
+    NSLog(@"acceleration: %f %f %f", acceleration.x, acceleration.y, acceleration.z);
+    
+    float angle = acceleration.z * 180.0;
+    
+    if ( angle > moonElevation ) {
+        [_imgDown setHidden:NO];
+        [_imgUp setHidden:YES];
+    } else {
+        [_imgDown setHidden:YES];
+        [_imgUp setHidden:NO];
+    }
+
+    
+}
+-(void)outputRotationData:(CMRotationRate)rotation
+{
+    //NSLog(@"rotation: %f %f %f", rotation.x, rotation.y, rotation.z);
 }
 
 - (void) updateMoonPhase {
@@ -115,6 +161,8 @@
     currentHeading = theHeading;
     NSLog(@"Heading: %f", theHeading);
     
+    [_lblMoon setHidden:NO];
+
     if ( theHeading > moonAzimuth ) {
         [_imgLeft setHidden:NO];
         [_imgRight setHidden:YES];
@@ -146,6 +194,7 @@
     
     [_imgDish stopAnimating];
     [_imgDish setHidden:YES];
+    [_lblLocating setHidden:YES];
     
     moonAzimuth = azimuth * 180.0 / M_PI;
     moonElevation = elevation * 180.0 / M_PI;

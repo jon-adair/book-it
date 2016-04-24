@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgLeft;
 @property (weak, nonatomic) IBOutlet UIImageView *imgDown;
 @property (weak, nonatomic) IBOutlet UIImageView *imgRight;
+@property (weak, nonatomic) IBOutlet UILabel *lblLocating;
+@property (weak, nonatomic) IBOutlet UILabel *lblMoon;
 
 
 
