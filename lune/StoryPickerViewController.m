@@ -42,7 +42,7 @@
     if ( [_contentMode isEqualToString:@"story"] ) {
         return 3;
     } else if ( [_contentMode isEqualToString:@"video"] ) {
-        return 3;
+        return 8;
     } else if ( [_contentMode isEqualToString:@"image"] ) {
         return 10;
     } else if ( [_contentMode isEqualToString:@"favorite"] ) {
@@ -81,13 +81,28 @@
     } else if ( [_contentMode isEqualToString:@"video"] ) {
         switch ( indexPath.row ) {
             case 0:
-                label = @"1968 NASA/USA";
+                label = @"Apollo 8 - 1968 NASA/USA";
                 break;
             case 1:
-                label = @"1969 NASA/USA"; 
+                label = @"Apollo 11 - 1969 NASA/USA";
                 break;
             case 2:
-                label = @"1972 NASA/USA";
+                label = @"Apollo 17 - 1972 NASA/USA";
+                break;
+            case 3:
+                label = @"Formation of the Moon";
+                break;
+            case 4:
+                label = @"How the Moon Affects Earth";
+                break;
+            case 5:
+                label = @"Returning to the Moon";
+                break;
+            case 6:
+                label = @"Moon, Mars, and Beyond";
+                break;
+            case 7:
+                label = @"LRO - Tour of the Moon";
                 break;
                 
             default:
@@ -99,34 +114,34 @@
     } else if ( [_contentMode isEqualToString:@"image"] ) {
         switch ( indexPath.row ) {
             case 0:
-                label = @"1959 OKB-1/USSR";
+                label = @"Luna 1-3 - 1959 OKB-1/USSR";
                 break;
             case 1:
-                label = @"1964-65 NASA/USA";
+                label = @"Ranger 7-9 - 1964-65 NASA/USA";
                 break;
             case 2:
-                label = @"1966 Molyniya-M/USSR";
+                label = @"Luna 9-10 - 1966 Molyniya-M/USSR";
                 break;
             case 3:
-                label = @"1968 NASA/USA";
+                label = @"Apollo 8 - 1968 NASA/USA";
                 break;
             case 4:
-                label = @"1969 NASA/USA";
+                label = @"Apollo 11 - 1969 NASA/USA";
                 break;
             case 5:
-                label = @"1972 NASA/USA";
+                label = @"Apollo 17 - 1972 NASA/USA";
                 break;
             case 6:
-                label = @"2003 ESA/Europe";
+                label = @"SMART-1 - 2003 ESA/Europe";
                 break;
             case 7:
-                label = @"2007 CNSA/China";
+                label = @"Chang'e 1 - 2007 CNSA/China";
                 break;
             case 8:
-                label = @"2008 ISRO/India";
+                label = @"Moon Impact Probe - 2008 ISRO/India";
                 break;
             case 9:
-                label = @"2014 LuxSpace/Luxembourg";
+                label = @"4M - 2014 LuxSpace/Luxembourg";
                 break;
                 
             default:

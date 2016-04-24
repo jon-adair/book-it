@@ -74,6 +74,11 @@
 		4682BF511CCC968F00D7C00F /* video-02.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF4F1CCC968F00D7C00F /* video-02.html */; };
 		4682BF521CCC968F00D7C00F /* video-03.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF501CCC968F00D7C00F /* video-03.html */; };
 		4682BF541CCC9B5D00D7C00F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4682BF531CCC9B5D00D7C00F /* CoreMotion.framework */; };
+		4682BF571CCCEF9D00D7C00F /* video-04.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF551CCCEF9D00D7C00F /* video-04.html */; };
+		4682BF581CCCEF9D00D7C00F /* video-05.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF561CCCEF9D00D7C00F /* video-05.html */; };
+		4682BF5C1CCCF23B00D7C00F /* video-06.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF591CCCF23B00D7C00F /* video-06.html */; };
+		4682BF5D1CCCF23B00D7C00F /* video-07.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF5A1CCCF23B00D7C00F /* video-07.html */; };
+		4682BF5E1CCCF23B00D7C00F /* video-08.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF5B1CCCF23B00D7C00F /* video-08.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +164,11 @@
 		4682BF4F1CCC968F00D7C00F /* video-02.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-02.html"; sourceTree = "<group>"; };
 		4682BF501CCC968F00D7C00F /* video-03.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-03.html"; sourceTree = "<group>"; };
 		4682BF531CCC9B5D00D7C00F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		4682BF551CCCEF9D00D7C00F /* video-04.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-04.html"; sourceTree = "<group>"; };
+		4682BF561CCCEF9D00D7C00F /* video-05.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-05.html"; sourceTree = "<group>"; };
+		4682BF591CCCF23B00D7C00F /* video-06.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-06.html"; sourceTree = "<group>"; };
+		4682BF5A1CCCF23B00D7C00F /* video-07.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-07.html"; sourceTree = "<group>"; };
+		4682BF5B1CCCF23B00D7C00F /* video-08.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "video-08.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +328,11 @@
 		4682BF4C1CCC943000D7C00F /* Video Content */ = {
 			isa = PBXGroup;
 			children = (
+				4682BF591CCCF23B00D7C00F /* video-06.html */,
+				4682BF5A1CCCF23B00D7C00F /* video-07.html */,
+				4682BF5B1CCCF23B00D7C00F /* video-08.html */,
+				4682BF551CCCEF9D00D7C00F /* video-04.html */,
+				4682BF561CCCEF9D00D7C00F /* video-05.html */,
 				4682BF4D1CCC94DA00D7C00F /* video-01.html */,
 				4682BF4F1CCC968F00D7C00F /* video-02.html */,
 				4682BF501CCC968F00D7C00F /* video-03.html */,
@@ -394,7 +409,10 @@
 				4682BEB21CCBBCB900D7C00F /* icon-book.png in Resources */,
 				4682BF361CCC8F1C00D7C00F /* image-09.jpg in Resources */,
 				4682BF4A1CCC916000D7C00F /* image-09.html in Resources */,
+				4682BF571CCCEF9D00D7C00F /* video-04.html in Resources */,
+				4682BF5D1CCCF23B00D7C00F /* video-07.html in Resources */,
 				4682BF1F1CCC719700D7C00F /* icon-arrow-down.png in Resources */,
+				4682BF5E1CCCF23B00D7C00F /* video-08.html in Resources */,
 				4682BF201CCC719700D7C00F /* icon-arrow-left.png in Resources */,
 				4682BF051CCC177900D7C00F /* icon-share.png in Resources */,
 				4682BF481CCC916000D7C00F /* image-07.html in Resources */,
@@ -413,6 +431,7 @@
 				4682BF461CCC916000D7C00F /* image-05.html in Resources */,
 				4682BF351CCC8F1C00D7C00F /* image-08.jpg in Resources */,
 				4682BF011CCC177900D7C00F /* icon-dish-2.png in Resources */,
+				4682BF5C1CCCF23B00D7C00F /* video-06.html in Resources */,
 				4682BF321CCC8F1C00D7C00F /* image-05.jpg in Resources */,
 				4682BF2F1CCC8F1C00D7C00F /* image-02.jpg in Resources */,
 				4682BF211CCC719700D7C00F /* icon-arrow-right.png in Resources */,
@@ -426,6 +445,7 @@
 				4682BF341CCC8F1C00D7C00F /* image-07.jpg in Resources */,
 				4682BED41CCBF4BC00D7C00F /* story-armstrong.html in Resources */,
 				4682BF331CCC8F1C00D7C00F /* image-06.jpg in Resources */,
+				4682BF581CCCEF9D00D7C00F /* video-05.html in Resources */,
 				4682BF4B1CCC916000D7C00F /* image-10.html in Resources */,
 				4682BF521CCC968F00D7C00F /* video-03.html in Resources */,
 				4682BEB31CCBBCB900D7C00F /* icon-chart.png in Resources */,
