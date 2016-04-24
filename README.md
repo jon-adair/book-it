@@ -1,8 +1,11 @@
-# book-it
-Book It to the Moon is a Space Apps Challenge
-
 # LunrLocatr
-This app, LunrLocatr, is Team Thinkamingo's entry in the Space Apps Challenge Hackathon. The app educates children about the moon - history, missions to the moon, and why the moon is still important to science and space exploration.
+This app, LunrLocatr, is Team Thinkamingo's entry in the Space Apps Challenge Hackathon for the "Book It to the Moon" challenge. 
+
+The app educates children about the moon - history, missions to the moon, and why the moon is still important to science and space exploration.
+
+# Team Thinkamingo
+
+Team Thinkamingo is made up of the Adair family. Elizabeth is a high school student, musician, mathlete, coder, and has participated in numerous robotic competitions. William is a middle school student and Boy Scout. Ann and Jon develop educational apps for their company, [Thinkamingo](http://thinkamingo.com). 
 
 Launch screen
 ![LunrLocatr](https://raw.githubusercontent.com/jon-adair/book-it/master/screenshots/Simulator%20Screen%20Shot%20Apr%2024%2C%202016%2C%209.25.35%20AM.png)
