@@ -1,3 +1,5 @@
+![icon](https://raw.githubusercontent.com/jon-adair/book-it/master/lune/app-icon3-152.png)
+
 # LunrLocatr
 This app, LunrLocatr, is Team Thinkamingo's entry in the Space Apps Challenge Hackathon for the "Book It to the Moon" challenge. 
 
