@@ -20,6 +20,9 @@ When the app launches, it finds the user's location to use to compute the curren
 The app uses the compass and accelerometer sensors to help the user point the device to the moon's current position.
 ![LunrLocatr](https://raw.githubusercontent.com/jon-adair/book-it/master/screenshots/Screen%20Shot%202016-04-24%20at%209.15.08%20AM.png)
 
+Testing the app outside SOFWERX at night.
+![LunrLocatr](https://raw.githubusercontent.com/jon-adair/book-it/master/screenshots/IMG_20160424_030049.jpg)
+
 The app provides a list of stories, poems, and other information related to the moon.
 ![LunrLocatr](https://raw.githubusercontent.com/jon-adair/book-it/master/screenshots/Simulator%20Screen%20Shot%20Apr%2024%2C%202016%2C%209.16.01%20AM.png)
 
