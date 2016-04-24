@@ -23,8 +23,12 @@
 
 - (void) didSelectStory:(int) storyId;
 - (void) didSelectVideo:(int) videoId;
+- (void) didSelectContent:(int) contentId withContentType:(NSString *)contentType;
 - (void) didFavoriteContent:(int) contentId withContentType:(NSString *) contentType;
+- (BOOL) isFavoriteContent:(int) contentId withContentType:(NSString *) contentType;
+- (void) didUnFavoriteContent:(int) contentId withContentType:(NSString *) contentType;
 
+@property NSMutableArray *favorites;
 
 @end
 

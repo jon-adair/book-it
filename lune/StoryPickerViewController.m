@@ -42,7 +42,11 @@
     if ( [_contentMode isEqualToString:@"story"] ) {
         return 3;
     } else if ( [_contentMode isEqualToString:@"video"] ) {
-        return 5;
+        return 3;
+    } else if ( [_contentMode isEqualToString:@"image"] ) {
+        return 10;
+    } else if ( [_contentMode isEqualToString:@"favorite"] ) {
+        return _vcMain.favorites.count;
     } else {
         return 0;
     }
@@ -77,13 +81,13 @@
     } else if ( [_contentMode isEqualToString:@"video"] ) {
         switch ( indexPath.row ) {
             case 0:
-                label = @"LRO Moon";
+                label = @"1968 NASA/USA";
                 break;
             case 1:
-                label = @"A View From The Other Side"; // jdkMHkF7BaA
+                label = @"1969 NASA/USA"; 
                 break;
             case 2:
-                label = @"The Moon Through the Years";
+                label = @"1972 NASA/USA";
                 break;
                 
             default:
@@ -92,9 +96,52 @@
                 
         }
         cell.imageView.image = [UIImage imageNamed:@"icon-video"];
+    } else if ( [_contentMode isEqualToString:@"image"] ) {
+        switch ( indexPath.row ) {
+            case 0:
+                label = @"1959 OKB-1/USSR";
+                break;
+            case 1:
+                label = @"1964-65 NASA/USA";
+                break;
+            case 2:
+                label = @"1966 Molyniya-M/USSR";
+                break;
+            case 3:
+                label = @"1968 NASA/USA";
+                break;
+            case 4:
+                label = @"1969 NASA/USA";
+                break;
+            case 5:
+                label = @"1972 NASA/USA";
+                break;
+            case 6:
+                label = @"2003 ESA/Europe";
+                break;
+            case 7:
+                label = @"2007 CNSA/China";
+                break;
+            case 8:
+                label = @"2008 ISRO/India";
+                break;
+            case 9:
+                label = @"2014 LuxSpace/Luxembourg";
+                break;
+                
+            default:
+                label = @"Video";
+                break;
+                
+        }
+//        NSString *name = [NSString stringWithFormat:@"image-%02d.jpg", indexPath.row+1];
+//        cell.imageView.image = [UIImage imageNamed:name];
+        cell.imageView.image = [UIImage imageNamed:@"icon-images"];
+
     }
-    
+
     cell.textLabel.text = label;
+    cell.detailTextLabel.text = @"detail here";
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     cell.backgroundColor = [UIColor blackColor];
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -108,6 +155,8 @@
         [_vcMain didSelectStory:indexPath.row];
     } else if ( [_contentMode isEqualToString:@"video"] ) {
         [_vcMain didSelectVideo:indexPath.row];
+    } else if ( [_contentMode isEqualToString:@"image"] ) {
+        [_vcMain didSelectContent:indexPath.row withContentType:_contentMode];
     }
 }
 
