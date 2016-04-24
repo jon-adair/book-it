@@ -3,10 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoryViewController">
             <connections>
+                <outlet property="btnShare" destination="VnO-n6-hzH" id="6SR-xn-bWH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="lga-DQ-h9f" id="JGI-1Y-VNx"/>
             </connections>
@@ -18,19 +20,49 @@
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lga-DQ-h9f">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="qsE-vb-zaj"/>
                     </connections>
                 </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SY0-qV-34D">
+                    <rect key="frame" x="10" y="10" width="48" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="SY0-qV-34D" secondAttribute="height" multiplier="109:100" id="Iem-eN-hRL"/>
+                        <constraint firstAttribute="width" constant="48" id="gda-uz-2e9"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="icon-star.png"/>
+                    <connections>
+                        <action selector="clickFavorite:" destination="-1" eventType="touchUpInside" id="Qp5-BX-Nj9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnO-n6-hzH">
+                    <rect key="frame" x="542" y="10" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="LSC-X2-KK3"/>
+                        <constraint firstAttribute="width" secondItem="VnO-n6-hzH" secondAttribute="height" multiplier="1:1" id="Rpo-cL-6FG"/>
+                    </constraints>
+                    <state key="normal" image="icon-share.png"/>
+                    <connections>
+                        <action selector="clickShare:" destination="-1" eventType="touchUpInside" id="q0h-Br-32L"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="VnO-n6-hzH" secondAttribute="trailing" constant="10" id="2oh-0x-hEO"/>
                 <constraint firstItem="lga-DQ-h9f" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4Jk-s7-IDz"/>
                 <constraint firstAttribute="bottom" secondItem="lga-DQ-h9f" secondAttribute="bottom" id="Uu5-rw-zef"/>
+                <constraint firstItem="VnO-n6-hzH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="e17-mU-rjd"/>
                 <constraint firstAttribute="trailing" secondItem="lga-DQ-h9f" secondAttribute="trailing" id="gXP-Fb-dUL"/>
+                <constraint firstItem="SY0-qV-34D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="pcB-JQ-HGJ"/>
                 <constraint firstItem="lga-DQ-h9f" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wf0-cs-LlR"/>
+                <constraint firstItem="SY0-qV-34D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="xa5-4j-jFy"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="icon-share.png" width="600" height="600"/>
+        <image name="icon-star.png" width="600" height="600"/>
+    </resources>
 </document>

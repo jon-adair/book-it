@@ -7,6 +7,7 @@
 //
 
 #import "StoryViewController.h"
+#import "ViewController.h"
 
 @interface StoryViewController ()
 
@@ -26,7 +27,18 @@
     
 }
 
+- (IBAction)clickFavorite:(id)sender {
+    
+}
 
+- (IBAction)clickShare:(id)sender {
+    UIActionSheet *sheet = [[UIActionSheet alloc] init];
+    sheet.title = @"Share";
+    [sheet addButtonWithTitle:@"Facebook"];
+    [sheet addButtonWithTitle:@"Email"];
+    
+    [sheet showFromRect:_btnShare.frame inView:self.view animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -35,6 +47,7 @@
 
 - (void) setContent:(NSString *)url {
     _url = url;
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"about:blank"]]];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
 //    [_webView reload];
 }

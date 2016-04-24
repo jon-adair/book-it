@@ -12,7 +12,9 @@
 
 @end
 
-@implementation StoryPickerViewController
+@implementation StoryPickerViewController {
+    NSString *_contentMode;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,41 +28,73 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) setContentMode:(NSString *) contentMode {
+    _contentMode = contentMode;
+    [_tableView reloadData];
+}
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    if ( [_contentMode isEqualToString:@"story"] ) {
+        return 3;
+    } else if ( [_contentMode isEqualToString:@"video"] ) {
+        return 5;
+    } else {
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"storypicker"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"picker"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"storypicker"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"picker"];
     }
     
     NSString *label;
     
-    switch ( indexPath.row ) {
-        case 0:
-            label = @"Neil Armstrong";
-            break;
-        case 1:
-            label = @"What the Moon Sees";
-            break;
-        case 2:
-            label = @"The Moon Through the Years";
-            break;
-            
-        default:
-            label = @"Story";
-            break;
+    if ( [_contentMode isEqualToString:@"story"] ) {
+        switch ( indexPath.row ) {
+            case 0:
+                label = @"Neil Armstrong";
+                break;
+            case 1:
+                label = @"What the Moon Sees";
+                break;
+            case 2:
+                label = @"The Moon Through the Years";
+                break;
+                
+            default:
+                label = @"Story";
+                break;
+        }
+        cell.imageView.image = [UIImage imageNamed:@"icon-book"];
+    } else if ( [_contentMode isEqualToString:@"video"] ) {
+        switch ( indexPath.row ) {
+            case 0:
+                label = @"LRO Moon";
+                break;
+            case 1:
+                label = @"A View From The Other Side"; // jdkMHkF7BaA
+                break;
+            case 2:
+                label = @"The Moon Through the Years";
+                break;
+                
+            default:
+                label = @"Video";
+                break;
+                
+        }
+        cell.imageView.image = [UIImage imageNamed:@"icon-video"];
     }
     
     cell.textLabel.text = label;
-    cell.imageView.image = [UIImage imageNamed:@"icon-book"];
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     cell.backgroundColor = [UIColor blackColor];
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -70,7 +104,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [_vcMain didSelectStory:indexPath.row];
+    if ( [_contentMode isEqualToString:@"story"] ) {
+        [_vcMain didSelectStory:indexPath.row];
+    } else if ( [_contentMode isEqualToString:@"video"] ) {
+        [_vcMain didSelectVideo:indexPath.row];
+    }
 }
 
 /*

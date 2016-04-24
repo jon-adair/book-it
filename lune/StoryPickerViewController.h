@@ -15,4 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) ViewController *vcMain;
 
+// should be enum
+- (void) setContentMode:(NSString *) contentMode;
+
 @end

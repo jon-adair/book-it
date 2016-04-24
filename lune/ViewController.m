@@ -21,6 +21,7 @@
     MoonViewController *vcMoon;
     StoryPickerViewController *vcStoryPicker;
     StoryViewController *vcStory;
+    NSMutableArray *favorites;
 }
 
 
@@ -40,6 +41,8 @@
     [self.containerView addSubview:vc.view];
     [vc didMoveToParentViewController:self];
     
+    // TODO: needs to persist
+    favorites = [[NSMutableArray alloc] init];
 
     
 }
@@ -58,6 +61,7 @@
 }
 
 - (IBAction)clickBook:(id)sender {
+    [vcStoryPicker setContentMode:@"story"];
     UIViewController *vc = vcStoryPicker;
     [self addChildViewController:vc];
     vc.view.frame = CGRectMake(0, 0, self.containerView.frame.size.width, self.containerView.frame.size.height);
@@ -73,6 +77,12 @@
 }
 
 - (IBAction)clickVideos:(id)sender {
+    [vcStoryPicker setContentMode:@"video"];
+    UIViewController *vc = vcStoryPicker;
+    [self addChildViewController:vc];
+    vc.view.frame = CGRectMake(0, 0, self.containerView.frame.size.width, self.containerView.frame.size.height);
+    [self.containerView addSubview:vc.view];
+    [vc didMoveToParentViewController:self];
 }
 
 - (IBAction)clickPortrait:(id)sender {
@@ -85,6 +95,31 @@
 }
 
 
+- (BOOL) isFavoriteConent:(int) contentId withContentType:(NSString *) contentType {
+    for ( id item in favorites ) {
+        if ( [[(NSDictionary *)item objectForKey:@"type"] isEqualToString:contentType] &&
+            [[(NSDictionary *)item objectForKey:@"id"] intValue] == contentId ) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (void) didUnFavoriteContent:(int) contentId withContentType:(NSString *) contentType {
+    for ( id item in favorites ) {
+        if ( [[(NSDictionary *)item objectForKey:@"type"] isEqualToString:contentType] &&
+             [[(NSDictionary *)item objectForKey:@"id"] intValue] == contentId ) {
+            [favorites removeObject:item];
+            break;
+        }
+    }
+}
+
+- (void) didFavoriteContent:(int) contentId withContentType:(NSString *) contentType
+{
+    [favorites addObject:[[NSDictionary alloc] initWithObjectsAndKeys:@"type", contentType, @"id", contentId, nil]];
+}
+
 - (void) didSelectStory:(int) storyId {
     NSString *filePath;
     
@@ -92,6 +127,36 @@
         case 0:
             filePath = [[NSBundle mainBundle] pathForResource:@"story-armstrong" ofType:@"html"];
             break;
+        default:
+            filePath = [[NSBundle mainBundle] pathForResource:@"blank" ofType:@"html"];
+            break;
+    }
+    
+    [vcStory setContent:filePath];
+    
+    
+    UIViewController *vc = vcStory;
+    
+    [self addChildViewController:vc];
+    vc.view.frame = CGRectMake(0, 0, self.containerView.frame.size.width, self.containerView.frame.size.height);
+    [self.containerView addSubview:vc.view];
+    [vc didMoveToParentViewController:self];
+    
+}
+
+- (void) didSelectVideo:(int) videoId {
+    NSString *filePath;
+    
+    switch ( videoId ) {
+        case 0:
+            filePath = @"https://www.youtube.com/watch?v=sNUNB6CMnE8";
+            //filePath = [[NSBundle mainBundle] pathForResource:@"story-armstrong" ofType:@"html"];
+            break;
+        case 1:
+            //filePath = @"https://www.youtube.com/watch?v=sNUNB6CMnE8";
+            filePath = [[NSBundle mainBundle] pathForResource:@"youtube-2" ofType:@"html"];
+            break;
+            // jdkMHkF7BaA
         default:
             filePath = [[NSBundle mainBundle] pathForResource:@"blank" ofType:@"html"];
             break;

@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSettings;
 
 - (void) didSelectStory:(int) storyId;
+- (void) didSelectVideo:(int) videoId;
+- (void) didFavoriteContent:(int) contentId withContentType:(NSString *) contentType;
+
 
 @end
 

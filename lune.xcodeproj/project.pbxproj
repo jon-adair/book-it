@@ -45,6 +45,11 @@
 		4682BF061CCC177900D7C00F /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 4682BEFE1CCC177900D7C00F /* icon-star.png */; };
 		4682BF071CCC177900D7C00F /* icon-video.png in Resources */ = {isa = PBXBuildFile; fileRef = 4682BEFF1CCC177900D7C00F /* icon-video.png */; };
 		4682BF0A1CCC1D1600D7C00F /* icon-dish-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF091CCC1D1600D7C00F /* icon-dish-0.png */; };
+		4682BF1A1CCC413800D7C00F /* youtube-2.html in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF191CCC413800D7C00F /* youtube-2.html */; };
+		4682BF1F1CCC719700D7C00F /* icon-arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF1B1CCC719700D7C00F /* icon-arrow-down.png */; };
+		4682BF201CCC719700D7C00F /* icon-arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF1C1CCC719700D7C00F /* icon-arrow-left.png */; };
+		4682BF211CCC719700D7C00F /* icon-arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF1D1CCC719700D7C00F /* icon-arrow-right.png */; };
+		4682BF221CCC719700D7C00F /* icon-arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 4682BF1E1CCC719700D7C00F /* icon-arrow-up.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +106,11 @@
 		4682BEFE1CCC177900D7C00F /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star.png"; sourceTree = "<group>"; };
 		4682BEFF1CCC177900D7C00F /* icon-video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-video.png"; sourceTree = "<group>"; };
 		4682BF091CCC1D1600D7C00F /* icon-dish-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dish-0.png"; sourceTree = "<group>"; };
+		4682BF191CCC413800D7C00F /* youtube-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "youtube-2.html"; sourceTree = "<group>"; };
+		4682BF1B1CCC719700D7C00F /* icon-arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-down.png"; sourceTree = "<group>"; };
+		4682BF1C1CCC719700D7C00F /* icon-arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-left.png"; sourceTree = "<group>"; };
+		4682BF1D1CCC719700D7C00F /* icon-arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-right.png"; sourceTree = "<group>"; };
+		4682BF1E1CCC719700D7C00F /* icon-arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-up.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,18 +146,14 @@
 		4682BE971CCBBB9000D7C00F /* lune */ = {
 			isa = PBXGroup;
 			children = (
+				4682BF101CCC35F900D7C00F /* Story Content */,
 				4682BF081CCC178400D7C00F /* icons */,
 				4682BEDB1CCBFDEB00D7C00F /* Origami512T.png */,
-				4682BED51CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg */,
 				4682BE9B1CCBBB9000D7C00F /* AppDelegate.h */,
 				4682BE9C1CCBBB9000D7C00F /* AppDelegate.m */,
 				4682BE9E1CCBBB9000D7C00F /* ViewController.h */,
 				4682BE9F1CCBBB9000D7C00F /* ViewController.m */,
 				4682BEA11CCBBB9000D7C00F /* Main.storyboard */,
-				4682BEA41CCBBB9000D7C00F /* Assets.xcassets */,
-				4682BEA61CCBBB9000D7C00F /* LaunchScreen.storyboard */,
-				4682BEA91CCBBB9000D7C00F /* Info.plist */,
-				4682BE981CCBBB9000D7C00F /* Supporting Files */,
 				4682BEC41CCBC93000D7C00F /* MoonViewController.h */,
 				4682BEC51CCBC93000D7C00F /* MoonViewController.m */,
 				4682BEC61CCBC93000D7C00F /* MoonViewController.xib */,
@@ -157,8 +163,10 @@
 				4682BECE1CCBDDA200D7C00F /* StoryViewController.h */,
 				4682BECF1CCBDDA200D7C00F /* StoryViewController.m */,
 				4682BED01CCBDDA200D7C00F /* StoryViewController.xib */,
-				4682BED31CCBF4BC00D7C00F /* story-armstrong.html */,
-				4682BED71CCBF7BB00D7C00F /* blank.html */,
+				4682BEA41CCBBB9000D7C00F /* Assets.xcassets */,
+				4682BEA61CCBBB9000D7C00F /* LaunchScreen.storyboard */,
+				4682BEA91CCBBB9000D7C00F /* Info.plist */,
+				4682BE981CCBBB9000D7C00F /* Supporting Files */,
 			);
 			path = lune;
 			sourceTree = "<group>";
@@ -196,6 +204,10 @@
 		4682BF081CCC178400D7C00F /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				4682BF1B1CCC719700D7C00F /* icon-arrow-down.png */,
+				4682BF1C1CCC719700D7C00F /* icon-arrow-left.png */,
+				4682BF1D1CCC719700D7C00F /* icon-arrow-right.png */,
+				4682BF1E1CCC719700D7C00F /* icon-arrow-up.png */,
 				4682BF091CCC1D1600D7C00F /* icon-dish-0.png */,
 				4682BEF81CCC177900D7C00F /* icon-dish-1.png */,
 				4682BEF91CCC177900D7C00F /* icon-dish-2.png */,
@@ -212,6 +224,17 @@
 				4682BEB11CCBBCB900D7C00F /* icon-moon.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		4682BF101CCC35F900D7C00F /* Story Content */ = {
+			isa = PBXGroup;
+			children = (
+				4682BED51CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg */,
+				4682BED31CCBF4BC00D7C00F /* story-armstrong.html */,
+				4682BED71CCBF7BB00D7C00F /* blank.html */,
+				4682BF191CCC413800D7C00F /* youtube-2.html */,
+			);
+			name = "Story Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,18 +299,23 @@
 				4682BEA81CCBBB9000D7C00F /* LaunchScreen.storyboard in Resources */,
 				4682BEC81CCBC93000D7C00F /* MoonViewController.xib in Resources */,
 				4682BEB21CCBBCB900D7C00F /* icon-book.png in Resources */,
+				4682BF1F1CCC719700D7C00F /* icon-arrow-down.png in Resources */,
+				4682BF201CCC719700D7C00F /* icon-arrow-left.png in Resources */,
 				4682BF051CCC177900D7C00F /* icon-share.png in Resources */,
 				4682BEDA1CCBF94600D7C00F /* icon-dish.png in Resources */,
 				4682BF061CCC177900D7C00F /* icon-star.png in Resources */,
+				4682BF1A1CCC413800D7C00F /* youtube-2.html in Resources */,
 				4682BED61CCBF50200D7C00F /* neil-armstrong-hero-AB.jpeg in Resources */,
 				4682BEA51CCBBB9000D7C00F /* Assets.xcassets in Resources */,
 				4682BEDC1CCBFDEB00D7C00F /* Origami512T.png in Resources */,
 				4682BECD1CCBCAD200D7C00F /* StoryPickerViewController.xib in Resources */,
 				4682BF011CCC177900D7C00F /* icon-dish-2.png in Resources */,
+				4682BF211CCC719700D7C00F /* icon-arrow-right.png in Resources */,
 				4682BF021CCC177900D7C00F /* icon-gear.png in Resources */,
 				4682BF0A1CCC1D1600D7C00F /* icon-dish-0.png in Resources */,
 				4682BF071CCC177900D7C00F /* icon-video.png in Resources */,
 				4682BEB41CCBBCB900D7C00F /* icon-moon.png in Resources */,
+				4682BF221CCC719700D7C00F /* icon-arrow-up.png in Resources */,
 				4682BED41CCBF4BC00D7C00F /* story-armstrong.html in Resources */,
 				4682BEB31CCBBCB900D7C00F /* icon-chart.png in Resources */,
 				4682BEDE1CCC040F00D7C00F /* icon-moon-waning-gibbous.png in Resources */,

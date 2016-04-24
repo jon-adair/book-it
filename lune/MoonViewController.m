@@ -22,6 +22,9 @@
 
     CLGeocoder *geocoder;
     CLPlacemark *placemark;
+    CLLocationDirection currentHeading;
+    
+    float moonAzimuth, moonElevation;
     
 
 
@@ -46,6 +49,17 @@
         locationManager.delegate = self;
     }
     [locationManager startUpdatingLocation];
+    
+    if ([CLLocationManager headingAvailable]) {
+        locationManager.headingFilter = 5;
+        [locationManager startUpdatingHeading];
+    }
+    
+    [_imgUp setHidden:YES];
+    [_imgDown setHidden:YES];
+    [_imgLeft setHidden:YES];
+    [_imgRight setHidden:YES];
+    
 }
 
 - (void) updateMoonPhase {
@@ -90,6 +104,27 @@
 
 /////// Moon location code
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
+    if (newHeading.headingAccuracy < 0)
+        return;
+    
+    // Use the true heading if it is valid.
+    CLLocationDirection  theHeading = ((newHeading.trueHeading > 0) ?
+                                       newHeading.trueHeading : newHeading.magneticHeading);
+    
+    currentHeading = theHeading;
+    NSLog(@"Heading: %f", theHeading);
+    
+    if ( theHeading > moonAzimuth ) {
+        [_imgLeft setHidden:NO];
+        [_imgRight setHidden:YES];
+    } else {
+        [_imgLeft setHidden:YES];
+        [_imgRight setHidden:NO];
+    }
+}
+
+
 - (void) findMoonPosition: (CLLocationCoordinate2D)location {
     NSDate *rightNow = [NSDate date];
     
@@ -100,10 +135,20 @@
     // Elevation: 0 horizon
     float elevation = [moon elevationAtDate:rightNow inLocation:location];
     
+    // distance in AU
+    float distance = [moon geocentricDistanceAtDate:rightNow];
+    
     NSLog(@"Moon azimuth: %f, elevation: %f", azimuth, elevation);
+    NSLog(@"Moon azimuth: %f deg, elevation: %f deg", azimuth * 180.0 / M_PI, elevation * 180.0 / M_PI);
+    NSLog(@"Moon distance: %f AU, %f million miles", distance, distance * 92.956);
+    
+    _lblMoonData.text = [NSString stringWithFormat:@"Phase: %.4f Az: %.2f\u00B0 El: %.2f\u00B0 D: %.0f km", _phase, azimuth * 180.0 / M_PI, elevation * 180.0 / M_PI, distance * 149600000 ];
     
     [_imgDish stopAnimating];
     [_imgDish setHidden:YES];
+    
+    moonAzimuth = azimuth * 180.0 / M_PI;
+    moonElevation = elevation * 180.0 / M_PI;
 }
 
 
@@ -112,6 +157,7 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation *newLocation = [locations lastObject];
+    
     
     [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
         

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7C11B8AA0D7714FBD1A1D5ACCA8C8160CB8F6E8B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6BE4E836A4AA4938E455DB25ADAF3B75145A0C95" : 0,
+    "7C11B8AA0D7714FBD1A1D5ACCA8C8160CB8F6E8B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9587FFB1-628E-4E00-8DD5-034484A4B6DB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6BE4E836A4AA4938E455DB25ADAF3B75145A0C95" : "lune\/CelestialUtil\/",
+    "7C11B8AA0D7714FBD1A1D5ACCA8C8160CB8F6E8B" : "lune\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "lune",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "lune.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/skonb\/CelestialUtil.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6BE4E836A4AA4938E455DB25ADAF3B75145A0C95"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/jonadair\/lune.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7C11B8AA0D7714FBD1A1D5ACCA8C8160CB8F6E8B"
+    }
+  ]
+}

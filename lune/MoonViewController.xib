@@ -10,6 +10,11 @@
             <connections>
                 <outlet property="btnPhase" destination="Ru3-Co-cCR" id="C0c-YL-NiE"/>
                 <outlet property="imgDish" destination="1uq-Ga-H1J" id="w44-O6-ItT"/>
+                <outlet property="imgDown" destination="Xp2-Gs-Y2a" id="HJv-F3-YSw"/>
+                <outlet property="imgLeft" destination="TpF-Xv-Suf" id="5p8-3a-0D4"/>
+                <outlet property="imgRight" destination="tsD-aL-x3n" id="WOp-hf-1cw"/>
+                <outlet property="imgUp" destination="KE7-Bb-wbf" id="hm0-us-FlF"/>
+                <outlet property="lblMoonData" destination="pRQ-be-7yN" id="HBO-K5-AyU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,13 +41,60 @@
                         <action selector="clickMoonPhase:" destination="-1" eventType="touchUpInside" id="PXP-g3-CWW"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pRQ-be-7yN" userLabel="Label Moon Data">
+                    <rect key="frame" x="136" y="592" width="456" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="456" id="5EH-2a-UQf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-up.png" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-Bb-wbf" userLabel="arrow up">
+                    <rect key="frame" x="250" y="64" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Uru-s1-tJt"/>
+                        <constraint firstAttribute="width" constant="100" id="cuM-5P-yqT"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-down.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xp2-Gs-Y2a" userLabel="arrow down">
+                    <rect key="frame" x="250" y="392" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="asw-Gv-5pw"/>
+                        <constraint firstAttribute="width" constant="100" id="kua-yT-lxs"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-left.png" translatesAutoresizingMaskIntoConstraints="NO" id="TpF-Xv-Suf">
+                    <rect key="frame" x="100" y="250" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="kRc-TA-R3E"/>
+                        <constraint firstAttribute="height" constant="100" id="pdb-IC-NGC"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right.png" translatesAutoresizingMaskIntoConstraints="NO" id="tsD-aL-x3n">
+                    <rect key="frame" x="400" y="250" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="ijl-HF-q7e"/>
+                        <constraint firstAttribute="width" constant="100" id="ixR-jt-jUo"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Ru3-Co-cCR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="6ue-4a-8tG"/>
                 <constraint firstAttribute="bottom" secondItem="Ru3-Co-cCR" secondAttribute="bottom" constant="20" id="83h-re-qae"/>
                 <constraint firstItem="1uq-Ga-H1J" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Kp-qv-3d5"/>
+                <constraint firstAttribute="bottom" secondItem="pRQ-be-7yN" secondAttribute="bottom" constant="8" id="GVG-m9-RBn"/>
+                <constraint firstItem="pRQ-be-7yN" firstAttribute="top" secondItem="Xp2-Gs-Y2a" secondAttribute="bottom" constant="100" id="N7A-tg-zhY"/>
+                <constraint firstAttribute="trailing" secondItem="pRQ-be-7yN" secondAttribute="trailing" constant="8" id="OfB-So-cJw"/>
+                <constraint firstItem="tsD-aL-x3n" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Vst-5p-50i"/>
+                <constraint firstItem="TpF-Xv-Suf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="d5W-jK-CmT"/>
                 <constraint firstItem="1uq-Ga-H1J" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gtz-jB-fo7"/>
+                <constraint firstItem="KE7-Bb-wbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="kjI-dS-U2k"/>
+                <constraint firstItem="Xp2-Gs-Y2a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="n8c-H8-zj2"/>
+                <constraint firstItem="TpF-Xv-Suf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pzP-ys-FLy"/>
+                <constraint firstItem="KE7-Bb-wbf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tNA-0t-BUO"/>
+                <constraint firstAttribute="trailing" secondItem="tsD-aL-x3n" secondAttribute="trailing" constant="100" id="zx3-H1-n7e"/>
             </constraints>
         </view>
         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uim-nU-kGy">
@@ -57,8 +109,19 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <state key="normal" title="Button"/>
         </button>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IeW-nQ-dCj">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+        </label>
     </objects>
     <resources>
+        <image name="icon-arrow-down.png" width="256" height="256"/>
+        <image name="icon-arrow-left.png" width="256" height="256"/>
+        <image name="icon-arrow-right.png" width="256" height="256"/>
+        <image name="icon-arrow-up.png" width="256" height="256"/>
         <image name="icon-dish-0.png" width="600" height="600"/>
         <image name="icon-moon-waning-gibbous.png" width="600" height="600"/>
     </resources>

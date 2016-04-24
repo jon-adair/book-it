@@ -15,6 +15,11 @@
 @property (weak, nonatomic) ViewController *vcMain;
 @property (weak, nonatomic) IBOutlet UIButton *btnPhase;
 @property (weak, nonatomic) IBOutlet UIImageView *imgDish;
+@property (weak, nonatomic) IBOutlet UILabel *lblMoonData;
+@property (weak, nonatomic) IBOutlet UIImageView *imgUp;
+@property (weak, nonatomic) IBOutlet UIImageView *imgLeft;
+@property (weak, nonatomic) IBOutlet UIImageView *imgDown;
+@property (weak, nonatomic) IBOutlet UIImageView *imgRight;
 
 
 
